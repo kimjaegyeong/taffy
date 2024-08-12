@@ -53,9 +53,9 @@ public class FightController {
         return ResponseEntity.status(HttpStatus.OK).body(new ResponseDto<>(HttpStatus.OK.value() , "방 가입 완료", connectionInfoDto));
     }
 
-    @DeleteMapping("/exit")
-    public ResponseEntity<ResponseDto> exitRoom(@AuthenticationPrincipal Long memberId, @RequestParam String sessionId, @RequestParam String roomType){
-        fightService.deleteRoom(sessionId, roomType);
-        return ResponseEntity.status(HttpStatus.OK).body(new ResponseDto<>(HttpStatus.OK.value(), "겨루기가 정상적으로 종료되었습니다.", "success"));
-    }
+//    @DeleteMapping("/exit")
+//    public ResponseEntity<ResponseDto> exitRoom(@AuthenticationPrincipal Long memberId, @RequestParam String sessionId, @RequestParam String roomType){
+//        fightService.deleteRoom(sessionId, roomType);
+//        return ResponseEntity.status(HttpStatus.OK).body(new ResponseDto<>(HttpStatus.OK.value(), "겨루기가 정상적으로 종료되었습니다.", "success"));
+//    }
 }
